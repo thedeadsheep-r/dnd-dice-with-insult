@@ -25,3 +25,7 @@ __pycache__/
 ehthumbs.db
 Thumbs.db
 .ipynb_checkpoints/
+
+# GitHub Scripts
+github_init.sh
+github_update.sh
