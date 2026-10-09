@@ -6,6 +6,8 @@ import dice
 import insults
 
 rolls_call = [100,20,12,10,8,6,4,2]
+clinet_id = 'Add_your_token'
+
 
 class Client(discord.Client):
         async def on_ready(self):
@@ -99,6 +101,6 @@ class Client(discord.Client):
 intents = discord.Intents.default()
 intents.message_content = True
 
-# This is for your discord client id
+
 client = Client(intents=intents)
-client.run('')
+client.run(clinet_id)
