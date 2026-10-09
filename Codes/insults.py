@@ -1,6 +1,9 @@
 import random
+
+used = []
+
 def inuslt():
-    x =random.randint(0, 17)
+    global used
 
     insults = []
 
@@ -22,5 +25,27 @@ def inuslt():
     insults.append('This is an excellent time for you to become a missing person.')
     insults.append('You are the reason some animals eat their young.')
     insults.append('How tf you find this reply. you must have really fucked up')
+    insults.append('I dont know what your problem is, but Ill bet its hard to pronounce.')
+    insults.append('Im thinking you werent burdened with an overabundance of schooling.')
+    insults.append('Everyone has the right to be stupid, but youre just abusing the privilege.')
+    insults.append('I am not calling you the stupidest person alive but you hope they do not die.')
+    insults.append('You are not being the person Lady E. knew you could be.')
+    insults.append('Who ever would fuck you is just too lazy to jerk off')
+    insults.append('I Would not attend Your funeral, but I will sent a nice letter saying I approved of it.')
+    insults.append('You just have about enough intelligence to open his mouth when you wanted to eat, but certainly no more.')
+    insults.append('You are distinguished for ignorance; for you have only one idea, and that is wrong.')
+    insults.append('Come, come, you froward and unable worms!')
+    insults.append('I must tell you friendly in your ear, sell when you can, you are not for all markets.')
+    insults.append('I’ll beat thee, but I would infect my hands.')
+    insults.append('Methink’st thou roll a general offence and every person should beat thee.')
+    insults.append('Thou cream faced loon')
 
+    if len(used) == len(insults):
+        used = []
+
+    x = random.randint(0, len(insults) - 1)
+    while x in used:
+        x = random.randint(0, len(insults) - 1)
+
+    used.append(x)
     return insults[x]
